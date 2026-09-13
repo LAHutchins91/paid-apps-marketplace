@@ -1,16 +1,26 @@
 {
   "name": "incidentbrief",
+  "displayName": "IncidentBrief",
   "version": "0.1.0",
-  "description": "Noisy logs \u2192 spike detection, error shapes, owner handoff brief. Free Cursor plugin funnel. Pro at https://plugins.lawrence.dev/pro",
+  "description": "Noisy logs \u2192 spike detection, error shapes, owner handoff brief.",
   "author": {
     "name": "Lawrence Hutchins"
   },
   "license": "MIT",
+  "homepage": "https://plugins.lawrence.dev/pro",
+  "repository": "https://github.com/LAHutchins91/paid-apps-marketplace",
   "keywords": [
     "security",
     "ci",
     "sast",
     "incidentbrief",
     "free"
-  ]
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "free",
+    "cursor",
+    "devtools"
+  ],
+  "logo": "assets/logo.svg"
 }

@@ -1,7 +1,10 @@
 {
   "name": "paid-apps-security-funnels",
   "owner": {
-    "name": "LAHutchins91"
+    "name": "Lawrence Hutchins"
+  },
+  "metadata": {
+    "description": "A curated set of free Cursor plugins for security, CI, and platform hygiene \u2014 env drift, auth gaps, CORS/CSP footguns, API contract diffs, and more. Free forever in Cursor; Pro at plugins.lawrence.dev/pro."
   },
   "plugins": [
     {
@@ -102,7 +105,7 @@
     {
       "name": "contractlock",
       "source": "./contractlock",
-      "description": "Env contract freeze + drift CI for teams. Turn `.env.example` into a frozen JSON lockfile, then fail CI when live env files drift. Companion product that pairs "
+      "description": "Env contract freeze + drift CI for teams. Turn `.env.example` into a frozen JSON lockfile, then fail CI when live env files drift. Companion product that pairs with the EnvDrift funnel."
     },
     {
       "name": "corsreflectban",
@@ -342,7 +345,7 @@
     {
       "name": "corsaudit",
       "source": "./corsaudit",
-      "description": "Lint CORS config for overly permissive origins \u2014 catch `origin: '*'` with `credentials: true`, `null` origins, and reflect-all patterns in Express, Next, and JS"
+      "description": "Lint CORS config for overly permissive origins \u2014 catch `origin: '*'` with `credentials: true`, `null` origins, and reflect-all patterns in Express, Next, and JSON."
     },
     {
       "name": "corscredentialsstarban",
@@ -357,7 +360,7 @@
     {
       "name": "cspaudit",
       "source": "./cspaudit",
-      "description": "Lint Content-Security-Policy for unsafe-inline / unsafe-eval / wildcards \u2014 catch `'unsafe-inline'`, `'unsafe-eval'`, host `*`, and scheme wildcards (`https:`, `"
+      "description": "Lint Content-Security-Policy for unsafe-inline / unsafe-eval / wildcards \u2014 catch `'unsafe-inline'`, `'unsafe-eval'`, host `*`, and scheme wildcards (`https:`, `data:`) in headers, HTML meta, nginx, Next, and JSON."
     },
     {
       "name": "csvguard",
@@ -432,7 +435,7 @@
     {
       "name": "ghaudit",
       "source": "./ghaudit",
-      "description": "Lint GitHub Actions workflow YAML for common footguns \u2014 unpinned actions (`@main`/`@master`), `pull_request_target` + checkout, secrets in `echo`, and missing `"
+      "description": "Lint GitHub Actions workflow YAML for common footguns \u2014 unpinned actions (`@main`/`@master`), `pull_request_target` + checkout, secrets in `echo`, and missing `permissions:` (warn)."
     },
     {
       "name": "graphqlinjectban",
