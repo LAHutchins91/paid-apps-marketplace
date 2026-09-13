@@ -55,7 +55,7 @@
     {
       "name": "sbomdiff",
       "source": "./sbomdiff",
-      "description": "Compare two CycloneDX or SPDX JSON SBOMs. See added, removed, and upgraded packages. Paste the markdown report into a PR"
+      "description": "Compare two CycloneDX or SPDX JSON SBOMs. See added, removed, and upgraded packages. Paste the markdown report into a PR."
     },
     {
       "name": "sqlmigrationguard",
@@ -100,7 +100,407 @@
     {
       "name": "contractlock",
       "source": "./contractlock",
-      "description": "Env contract freeze + drift CI for teams. Turn `.env.example` into a frozen JSON lockfile, then fail CI when live env fi"
+      "description": "Env contract freeze + drift CI for teams. Turn `.env.example` into a frozen JSON lockfile, then fail CI when live env files drift. Companion product that pairs "
+    },
+    {
+      "name": "corsreflectban",
+      "source": "./corsreflectban",
+      "description": "Fail CI when CORS reflects Origin / origin:true with credentials."
+    },
+    {
+      "name": "csrfguard",
+      "source": "./csrfguard",
+      "description": "Fail CI on missing CSRF for session apps and SameSite=None cookies."
+    },
+    {
+      "name": "deserializeban",
+      "source": "./deserializeban",
+      "description": "Fail CI on node-serialize / unserialize / cryo.parse of untrusted input."
+    },
+    {
+      "name": "digestpin",
+      "source": "./digestpin",
+      "description": "Require digest-pinned container images in compose/k8s YAML \u2014 catch `:latest`, floating tags, and untagged images before they drift."
+    },
+    {
+      "name": "dnsrebindurlban",
+      "source": "./dnsrebindurlban",
+      "description": "Fail CI when fetch URLs are built from user-controlled hostnames."
+    },
+    {
+      "name": "dockguard",
+      "source": "./dockguard",
+      "description": "Dockerfile lint for secrets, root user, unpinned tags, and large layers."
+    },
+    {
+      "name": "docsecrets",
+      "source": "./docsecrets",
+      "description": "Scan markdown/docs for leaked API keys (always masked)."
+    },
+    {
+      "name": "evalban",
+      "source": "./evalban",
+      "description": "Fail CI on eval / new Function / string timers / vm.runIn*."
+    },
+    {
+      "name": "exposeddockerdaemonban",
+      "source": "./exposeddockerdaemonban",
+      "description": "Fail CI on unsafe Docker daemon exposure."
+    },
+    {
+      "name": "fileuploadban",
+      "source": "./fileuploadban",
+      "description": "Fail CI on unsafe multer/upload handlers (no limits, originalname writes)."
+    },
+    {
+      "name": "fingerprintlog",
+      "source": "./fingerprintlog",
+      "description": "Normalize log lines into stable fingerprints."
+    },
+    {
+      "name": "githubactionsoidcmissban",
+      "source": "./githubactionsoidcmissban",
+      "description": "Fail CI when GitHub Actions use long-lived cloud keys instead of OIDC."
+    },
+    {
+      "name": "hardcodedsecretban",
+      "source": "./hardcodedsecretban",
+      "description": "Fail CI on hardcoded passwords/API keys in source (masked)."
+    },
+    {
+      "name": "hardiff",
+      "source": "./hardiff",
+      "description": "Compare HAR captures / triage slow or failing HTTP traffic."
+    },
+    {
+      "name": "hostpathmountban",
+      "source": "./hostpathmountban",
+      "description": "Fail CI when K8s/compose mounts dangerous host paths."
+    },
+    {
+      "name": "idorguard",
+      "source": "./idorguard",
+      "description": "Fail CI on IDOR footguns: findById/update/delete by params id without ownership."
+    },
+    {
+      "name": "insecuretlsban",
+      "source": "./insecuretlsban",
+      "description": "Fail CI when TLS verification is disabled."
+    },
+    {
+      "name": "jsonschemaguard",
+      "source": "./jsonschemaguard",
+      "description": "Validate JSON/YAML payloads against JSON Schema \u2014 with a CI gate for API/platform teams."
+    },
+    {
+      "name": "jwtexpiryban",
+      "source": "./jwtexpiryban",
+      "description": "Fail CI on jwt.sign without expiry / ignoreExpiration / long TTL."
+    },
+    {
+      "name": "jwtsecrethardcodeban",
+      "source": "./jwtsecrethardcodeban",
+      "description": "Fail CI on jwt.sign/jose with hardcoded string secrets."
+    },
+    {
+      "name": "latencybudget",
+      "source": "./latencybudget",
+      "description": "Assert p95/p99 latency budgets from CSV metrics \u2014 with a CI gate for SRE & platform teams."
+    },
+    {
+      "name": "licensescan",
+      "source": "./licensescan",
+      "description": "Scan package.json / lockfile-ish inventory for license risk \u2014 GPL/AGPL flags, copyleft, proprietary."
+    },
+    {
+      "name": "migrateunsafeban",
+      "source": "./migrateunsafeban",
+      "description": "Fail CI on DROP TABLE/COLUMN, TRUNCATE, DELETE without WHERE in migrations."
+    },
+    {
+      "name": "nplusoneban",
+      "source": "./nplusoneban",
+      "description": "Fail CI on ORM/DB calls inside loops (N+1)."
+    },
+    {
+      "name": "privilegedcontainerban",
+      "source": "./privilegedcontainerban",
+      "description": "Fail CI when containers run privileged or with hostNetwork/hostPID."
+    },
+    {
+      "name": "protopollutionspreadban",
+      "source": "./protopollutionspreadban",
+      "description": "Fail CI on {...req.body}, Object.assign/lodash.merge from untrusted input."
+    },
+    {
+      "name": "provenancemissban",
+      "source": "./provenancemissban",
+      "description": "Fail CI when build provenance is missing."
+    },
+    {
+      "name": "publicenv",
+      "source": "./publicenv",
+      "description": "Flag `NEXT_PUBLIC_` / `VITE_` secrets that look private \u2014 scan `.env*` for public-prefix keys whose names (or value shapes) scream secret."
+    },
+    {
+      "name": "pulumistacksecretban",
+      "source": "./pulumistacksecretban",
+      "description": "Fail CI when Pulumi stack configs leak secrets."
+    },
+    {
+      "name": "raceconditionguard",
+      "source": "./raceconditionguard",
+      "description": "Fail CI on TOCTOU / check-then-act races (exists-then-write, RMW, missing CAS)."
+    },
+    {
+      "name": "ratelimitguard",
+      "source": "./ratelimitguard",
+      "description": "Fail CI on auth/login/reset/OTP routes without rate limiting."
+    },
+    {
+      "name": "rawqueryban",
+      "source": "./rawqueryban",
+      "description": "Fail CI on interpolated $queryRaw / sequelize.query / knex.raw / TypeORM query."
+    },
+    {
+      "name": "rollbacksketch",
+      "source": "./rollbacksketch",
+      "description": "Best-effort rollback sketches for SQL migrations \u2014 confidence labels, risk notes, and heavy warnings when a DROP cannot be reversed."
+    },
+    {
+      "name": "sastskipciban",
+      "source": "./sastskipciban",
+      "description": "Fail CI when SAST scanners are skipped."
+    },
+    {
+      "name": "secretsage",
+      "source": "./secretsage",
+      "description": "Scan git-log text dumps for leaked secrets (masked)."
+    },
+    {
+      "name": "secretscanskipban",
+      "source": "./secretscanskipban",
+      "description": "Fail CI when secret scanners are skipped."
+    },
+    {
+      "name": "specmock",
+      "source": "./specmock",
+      "description": "Generate a lightweight mock server stub from OpenAPI \u2014 offline, then run it."
+    },
+    {
+      "name": "ssrffetchban",
+      "source": "./ssrffetchban",
+      "description": "Fail CI when HTTP clients fetch user-controlled URLs without host allowlists."
+    },
+    {
+      "name": "transactionleakban",
+      "source": "./transactionleakban",
+      "description": "Fail CI when DB transactions are unawaited or unclosed."
+    },
+    {
+      "name": "unsignedreleaseban",
+      "source": "./unsignedreleaseban",
+      "description": "Fail CI when releases lack signing/attestation."
+    },
+    {
+      "name": "capsysadminban",
+      "source": "./capsysadminban",
+      "description": "Fail CI when containers add SYS_ADMIN/NET_ADMIN/ALL."
+    },
+    {
+      "name": "cassandranoauthban",
+      "source": "./cassandranoauthban",
+      "description": "Fail CI when Cassandra/Scylla clients connect without auth."
+    },
+    {
+      "name": "childprocessban",
+      "source": "./childprocessban",
+      "description": "Fail CI on child_process.exec/spawn shell:true + command templates."
+    },
+    {
+      "name": "clickhousenoauthban",
+      "source": "./clickhousenoauthban",
+      "description": "Fail CI when ClickHouse clients connect without auth."
+    },
+    {
+      "name": "commandinjectban",
+      "source": "./commandinjectban",
+      "description": "Fail CI on child_process.exec/shell:true and user-input command injection."
+    },
+    {
+      "name": "cookieaudit",
+      "source": "./cookieaudit",
+      "description": "Lint Set-Cookie / cookie config for missing Secure, HttpOnly, and SameSite."
+    },
+    {
+      "name": "cookiesecurefalseban",
+      "source": "./cookiesecurefalseban",
+      "description": "Fail CI on secure:false cookies, SameSite=None without Secure, Set-Cookie missing Secure."
+    },
+    {
+      "name": "corsaudit",
+      "source": "./corsaudit",
+      "description": "Lint CORS config for overly permissive origins \u2014 catch `origin: '*'` with `credentials: true`, `null` origins, and reflect-all patterns in Express, Next, and JS"
+    },
+    {
+      "name": "corscredentialsstarban",
+      "source": "./corscredentialsstarban",
+      "description": "Ban ACAO * / reflect-origin with credentials:true."
+    },
+    {
+      "name": "crashtriage",
+      "source": "./crashtriage",
+      "description": "Paste a stack trace / crash log \u2192 normalized triage brief."
+    },
+    {
+      "name": "cspaudit",
+      "source": "./cspaudit",
+      "description": "Lint Content-Security-Policy for unsafe-inline / unsafe-eval / wildcards \u2014 catch `'unsafe-inline'`, `'unsafe-eval'`, host `*`, and scheme wildcards (`https:`, `"
+    },
+    {
+      "name": "csvguard",
+      "source": "./csvguard",
+      "description": "CSV schema / column drift checker \u2014 with a CI gate for data & platform teams."
+    },
+    {
+      "name": "deaddep",
+      "source": "./deaddep",
+      "description": "Find unused npm dependencies \u2014 import / require / dynamic-import scan vs `package.json`."
+    },
+    {
+      "name": "dependabotignoreallban",
+      "source": "./dependabotignoreallban",
+      "description": "Fail CI when Dependabot/Renovate is neutered."
+    },
+    {
+      "name": "depupgradebrief",
+      "source": "./depupgradebrief",
+      "description": "Changelog + semver risk brief when bumping npm packages."
+    },
+    {
+      "name": "deserialban",
+      "source": "./deserialban",
+      "description": "Fail CI on unsafe deserialization patterns."
+    },
+    {
+      "name": "dockerfilerootban",
+      "source": "./dockerfilerootban",
+      "description": "Fail CI on root Dockerfiles, secret ENV, chmod 777."
+    },
+    {
+      "name": "eagerloadban",
+      "source": "./eagerloadban",
+      "description": "Fail CI on deep ORM include/populate/relations eager-loads."
+    },
+    {
+      "name": "elasticsearchnoauthban",
+      "source": "./elasticsearchnoauthban",
+      "description": "Ban unauthenticated Elasticsearch/OpenSearch clients."
+    },
+    {
+      "name": "envleaklogban",
+      "source": "./envleaklogban",
+      "description": "Fail CI when process.env / secrets are logged or stringified."
+    },
+    {
+      "name": "examplesync",
+      "source": "./examplesync",
+      "description": "Generate safe `.env.example` from live env contracts. Placeholders only \u2014 never copy real secret values into examples."
+    },
+    {
+      "name": "fetchcredsban",
+      "source": "./fetchcredsban",
+      "description": "Fail CI on fetch/axios credentials to third-party origins."
+    },
+    {
+      "name": "findallban",
+      "source": "./findallban",
+      "description": "Fail CI on ORM findAll/find/findMany without WHERE."
+    },
+    {
+      "name": "floatingpromise",
+      "source": "./floatingpromise",
+      "description": "Detect floating promises / missing await."
+    },
+    {
+      "name": "fspathjoinban",
+      "source": "./fspathjoinban",
+      "description": "Fail CI on path.join/fs with user-controlled path segments."
+    },
+    {
+      "name": "ghaudit",
+      "source": "./ghaudit",
+      "description": "Lint GitHub Actions workflow YAML for common footguns \u2014 unpinned actions (`@main`/`@master`), `pull_request_target` + checkout, secrets in `echo`, and missing `"
+    },
+    {
+      "name": "graphqlinjectban",
+      "source": "./graphqlinjectban",
+      "description": "Fail CI on GraphQL query/mutation string concat without variables."
+    },
+    {
+      "name": "graphqlintrospectban",
+      "source": "./graphqlintrospectban",
+      "description": "Fail CI when GraphQL introspection/playground/GraphiQL ships in prod."
+    },
+    {
+      "name": "headerinjectban",
+      "source": "./headerinjectban",
+      "description": "Fail CI on HTTP header injection / CRLF from unsanitized user input."
+    },
+    {
+      "name": "helmdebugvaluesban",
+      "source": "./helmdebugvaluesban",
+      "description": "Fail CI on Helm debug/insecure values."
+    },
+    {
+      "name": "hostheaderban",
+      "source": "./hostheaderban",
+      "description": "Fail CI on host-header injection / password-reset poisoning via Host header."
+    },
+    {
+      "name": "htmlsanitizermissban",
+      "source": "./htmlsanitizermissban",
+      "description": "Fail CI when user HTML is rendered without DOMPurify/sanitize-html."
+    },
+    {
+      "name": "httpparampollutionban",
+      "source": "./httpparampollutionban",
+      "description": "Fail CI on qs allowPrototypes / HPP without hpp middleware."
+    },
+    {
+      "name": "httptohttpsmissban",
+      "source": "./httptohttpsmissban",
+      "description": "Fail CI when production configs use plain HTTP."
+    },
+    {
+      "name": "innerhtmlban",
+      "source": "./innerhtmlban",
+      "description": "Fail CI on .innerHTML / dangerouslySetInnerHTML without sanitizer."
+    },
+    {
+      "name": "insecuretransportban",
+      "source": "./insecuretransportban",
+      "description": "Fail CI on cleartext ws://, ftp://, http:// API bases, TLS reject disabled."
+    },
+    {
+      "name": "jwtnonealgban",
+      "source": "./jwtnonealgban",
+      "description": "Fail CI on JWT verify with alg none or missing algorithms."
+    },
+    {
+      "name": "kafkanoauthban",
+      "source": "./kafkanoauthban",
+      "description": "Fail CI when Kafka clients lack TLS/SASL."
+    },
+    {
+      "name": "kubeexecshellban",
+      "source": "./kubeexecshellban",
+      "description": "Ban unsafe interactive kubectl shells in CI."
+    },
+    {
+      "name": "latesttagban",
+      "source": "./latesttagban",
+      "description": "Ban floating image tags (:latest) in Dockerfile, compose, k8s."
     }
   ]
 }

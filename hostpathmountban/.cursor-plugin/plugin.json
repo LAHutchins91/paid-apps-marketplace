@@ -1,0 +1,16 @@
+{
+  "name": "hostpathmountban",
+  "version": "0.1.0",
+  "description": "Fail CI when K8s/compose mounts dangerous host paths. Free Cursor plugin funnel. Pro at https://plugins.lawrence.dev/pro",
+  "author": {
+    "name": "Lawrence Hutchins"
+  },
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "ci",
+    "sast",
+    "hostpathmountban",
+    "free"
+  ]
+}

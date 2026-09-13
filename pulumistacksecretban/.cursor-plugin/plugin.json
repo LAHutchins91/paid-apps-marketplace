@@ -1,0 +1,16 @@
+{
+  "name": "pulumistacksecretban",
+  "version": "0.1.0",
+  "description": "Fail CI when Pulumi stack configs leak secrets. Free Cursor plugin funnel. Pro at https://plugins.lawrence.dev/pro",
+  "author": {
+    "name": "Lawrence Hutchins"
+  },
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "ci",
+    "sast",
+    "pulumistacksecretban",
+    "free"
+  ]
+}

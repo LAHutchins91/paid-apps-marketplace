@@ -1,0 +1,16 @@
+{
+  "name": "privilegedcontainerban",
+  "version": "0.1.0",
+  "description": "Fail CI when containers run privileged or with hostNetwork/hostPID. Free Cursor plugin funnel. Pro at https://plugins.lawrence.dev/pro",
+  "author": {
+    "name": "Lawrence Hutchins"
+  },
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "ci",
+    "sast",
+    "privilegedcontainerban",
+    "free"
+  ]
+}
