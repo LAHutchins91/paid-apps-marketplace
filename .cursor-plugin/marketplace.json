@@ -1,0 +1,106 @@
+{
+  "name": "paid-apps-security-funnels",
+  "owner": "LAHutchins91",
+  "plugins": [
+    {
+      "name": "apidiffgate",
+      "source": "./apidiffgate",
+      "description": "OpenAPI/Swagger contract diff gate for PRs. Stop breaking API changes from shipping to production."
+    },
+    {
+      "name": "adminrouteban",
+      "source": "./adminrouteban",
+      "description": "Fail CI when /admin routes lack requireAdmin / isAdmin / role checks."
+    },
+    {
+      "name": "envdrift",
+      "source": "./envdrift",
+      "description": "Env drift + secrets auditor. Catch missing/unexpected env keys and high-confidence leaked secrets before they ship."
+    },
+    {
+      "name": "errorbudget",
+      "source": "./errorbudget",
+      "description": "Error-rate / error-budget brief for a time window from CSV/JSON metrics."
+    },
+    {
+      "name": "gitsecrethistoryban",
+      "source": "./gitsecrethistoryban",
+      "description": "Fail CI when secrets appear in working-tree files."
+    },
+    {
+      "name": "hardcodedapikeyban",
+      "source": "./hardcodedapikeyban",
+      "description": "Fail CI on hardcoded API keys in string literals (sk_, AKIA, ghp_, xoxb_, JWT)."
+    },
+    {
+      "name": "incidentbrief",
+      "source": "./incidentbrief",
+      "description": "Noisy logs \u2192 spike detection, error shapes, owner handoff brief."
+    },
+    {
+      "name": "missingauthban",
+      "source": "./missingauthban",
+      "description": "Fail CI when sensitive Express/Next/Fastify/Hono routes lack auth."
+    },
+    {
+      "name": "prismaguard",
+      "source": "./prismaguard",
+      "description": "Lint Prisma schema & migrations for destructive DROP/delete risks \u2014 before they ship."
+    },
+    {
+      "name": "rotatewatch",
+      "source": "./rotatewatch",
+      "description": "Secret age / rotation reminder from a vault-export CSV or a `.env` mtime inventory."
+    },
+    {
+      "name": "sbomdiff",
+      "source": "./sbomdiff",
+      "description": "Compare two CycloneDX or SPDX JSON SBOMs. See added, removed, and upgraded packages. Paste the markdown report into a PR"
+    },
+    {
+      "name": "sqlmigrationguard",
+      "source": "./sqlmigrationguard",
+      "description": "Review SQL migrations for destructive ops, lock hazards, and unsafe ordering \u2014 before they ship."
+    },
+    {
+      "name": "terraformstatesecretsban",
+      "source": "./terraformstatesecretsban",
+      "description": "Fail CI when Terraform risks secret leakage in state."
+    },
+    {
+      "name": "ansiblevaultmissban",
+      "source": "./ansiblevaultmissban",
+      "description": "Fail CI when Ansible secrets aren't vaulted."
+    },
+    {
+      "name": "blametrail",
+      "source": "./blametrail",
+      "description": "Git archaeology brief \u2014 who touched a path, churn, hot files."
+    },
+    {
+      "name": "branchprotectionmissban",
+      "source": "./branchprotectionmissban",
+      "description": "Fail CI on weak branch protection patterns."
+    },
+    {
+      "name": "bundlebudget",
+      "source": "./bundlebudget",
+      "description": "Assert JS bundle size budgets from stats JSON/CSV \u2014 with a CI gate for frontend & platform teams."
+    },
+    {
+      "name": "childprocessshellban",
+      "source": "./childprocessshellban",
+      "description": "Fail CI on exec(`${req.`) / spawn shell:true / execFile misuse."
+    },
+    {
+      "name": "cisecretsinlogban",
+      "source": "./cisecretsinlogban",
+      "description": "Fail CI when workflows leak secrets into logs."
+    },
+    {
+      "name": "contractlock",
+      "source": "./contractlock",
+      "description": "Env contract freeze + drift CI for teams. Turn `.env.example` into a frozen JSON lockfile, then fail CI when live env fi"
+    }
+  ]
+}
