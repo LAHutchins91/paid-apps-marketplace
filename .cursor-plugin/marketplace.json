@@ -1,6 +1,8 @@
 {
   "name": "paid-apps-security-funnels",
-  "owner": "LAHutchins91",
+  "owner": {
+    "name": "LAHutchins91"
+  },
   "plugins": [
     {
       "name": "apidiffgate",
