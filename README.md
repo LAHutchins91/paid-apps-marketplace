@@ -47,3 +47,7 @@ Full list: `.cursor-plugin/marketplace.json` (100 entries).
 ## License
 
 MIT
+
+---
+
+More from Ouroboros: https://ouroborosapps.com
